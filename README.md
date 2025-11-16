@@ -2,23 +2,22 @@
 
 A Python application for monitoring status pages using webhooks and RSS feeds. Built to handle 100+ status pages efficiently with an event-driven architecture.
 
-## How It Works
+## Setup
 
-The system uses a hybrid approach:
-- **Webhooks**: Instant notifications when available (< 1 second latency)
-- **RSS Feeds**: Fallback polling for providers without webhook support (3-minute intervals)
-- **Unified Processing**: Both sources feed into the same event handler to avoid duplicates
-
-## Installation
+First, create and activate a virtual environment:
 
 ```bash
-cd openai_status_tracker
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Usage
-
-Run the monitor:
+## Running the Monitor
 
 ```bash
 python3 main.py
